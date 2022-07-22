@@ -31,7 +31,10 @@ public class TicketController {
 //    public List<Ticket> bookTickets(){
 //        return ticketService.getTicketsById();
 //    }
-
+     @GetMapping("/getTicket")
+        public Optional<Ticket> getTicket(@RequestParam("ticketId") Integer ticketId) {
+            return ticketService.getTicket( ticketId);
+        }
 
 
 }
