@@ -40,7 +40,10 @@ public class TicketServiceImpl implements TicketService {
     public List<Ticket> getTickets() {
         return (List<Ticket>)ticketDao.findAll() ;
     }
-
+    @Override
+        public Optional<Ticket> getTicket(Integer  ticketId) {
+            return (Optional<Ticket>)ticketDao.findById(ticketId);
+        }
 
 }
 
